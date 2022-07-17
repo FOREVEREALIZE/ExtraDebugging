@@ -22,5 +22,5 @@ jobs:
           arguments: build
       - uses: actions/upload-artifact@v3
         with:
-          name: ${{ join(['extradebugging-built-on-', matrix.os, '.jar']) }}
+          name: ${{ matrix.os }}
           path: build/libs/*.jar

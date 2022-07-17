@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: CI
 on: [push]
 
 jobs:
@@ -27,5 +27,5 @@ jobs:
           arguments: build
       - uses: actions/upload-artifact@v3
         with:
-          name: ${{ matrix.os }} '-' ${{matrix.java-version }}
+          name: extradebugging-dev-${{ matrix.os }}-java-${{matrix.java-version }}
           path: build/libs/*.jar

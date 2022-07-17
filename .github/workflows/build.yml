@@ -14,8 +14,6 @@ jobs:
         with:
           java-version: '8'
           distribution: 'adopt-hotspot'
-      - name: Validate Gradle wrapper
-        uses: gradle/wrapper-validation-action@v1
       - name: Build with Gradle
         uses: gradle/gradle-build-action@v2
         with:

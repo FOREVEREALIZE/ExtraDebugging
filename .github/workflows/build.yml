@@ -12,7 +12,9 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3
-      - name: Set up JDK 11
+      - name: Print information about the run
+        run: echo Java version is ${{ matrix.java-version }} and OS is ${{ matrix.os }}
+      - name: Set up JDK
         uses: actions/setup-java@v3
         with:
           java-version: ${{ matrix.java-version }}
@@ -25,5 +27,5 @@ jobs:
           arguments: build
       - uses: actions/upload-artifact@v3
         with:
-          name: ${{ matrix.os }}
+          name: ${{ matrix.os }} '-' ${{matrix.java-version }}
           path: build/libs/*.jar

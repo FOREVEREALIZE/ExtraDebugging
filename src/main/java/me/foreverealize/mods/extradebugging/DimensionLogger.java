@@ -14,7 +14,7 @@ public class DimensionLogger {
     @SubscribeEvent
     public static void onDimensionLoaded(EntityTravelToDimensionEvent event) {
         if (event.getEntity().getType() == EntityType.PLAYER) {
-            LOGGER.warn("Player " + event.getEntity().getDisplayName().getString() + " with UUID " + event.getEntity().getUniqueID() + " entered dimension " + event.getDimension().getLocation());
+            LOGGER.info("Player " + event.getEntity().getDisplayName().getString() + " with UUID " + event.getEntity().getUniqueID() + " entered dimension " + event.getDimension().getLocation());
         }
     }
 }

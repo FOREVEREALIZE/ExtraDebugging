@@ -42,6 +42,8 @@ public class Extradebugging {
         MinecraftForge.EVENT_BUS.register(DimensionLogger.class);
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, OptionsHolder.COMMON_SPEC);
+
+        MinecraftForge.EVENT_BUS.register(ExtraDebuggingCommand.class);
     }
 
     private void setup(final FMLCommonSetupEvent event) {

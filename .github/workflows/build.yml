@@ -27,5 +27,5 @@ jobs:
           arguments: build
       - uses: actions/upload-artifact@v3
         with:
-          name: extradebugging-dev-${{ matrix.os }}-java-${{matrix.java-version }}
+          name: extradebugging-dev-built-on-${{ matrix.os }}-using-java-${{matrix.java-version }}
           path: build/libs/*.jar
